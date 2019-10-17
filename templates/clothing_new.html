@@ -1,0 +1,25 @@
+<!-- templates/clothing_new.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<form method='POST' action='/clothing'>
+    <fieldset>
+    <legend>New Piece!</legend>
+    <!-- Name -->
+    <p>
+        <label for='name'>Name</label><br>
+        <input type='text' name='name' />
+    </p>
+    <!--Brand-->
+    <p>
+        <label for='brand'>Brand</label><br>
+        <input type='text' name='brand' />
+    </p>
+    </fieldset>
+
+    <!-- BUTTON -->
+    <p>
+        <button type='submit'>Save Piece!</button>
+    </p>
+</form>
+{% endblock %}

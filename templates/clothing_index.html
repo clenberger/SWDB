@@ -3,8 +3,9 @@
 
 {% block content %}
     <h1>Welcome to SWDB!</h1>
-    {% for item in clothing_index %}
-        <h2>{{ item.name }}</h2>
+    <a href='/clothing/new'>Add a New Piece!</a>
+    {% for item in clothing_db %}
+        <h2><a href='/clothing/{{ item._id }}'>{{ item.name }}</a></h2>
         <small>{{ item.brand }}</small>
     {% endfor %}
 {% endblock %}
