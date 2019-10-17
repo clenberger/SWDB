@@ -1,0 +1,10 @@
+<!-- templates/clothing_index.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Welcome to SWDB!</h1>
+    {% for item in clothing_index %}
+        <h2>{{ item.name }}</h2>
+        <small>{{ item.brand }}</small>
+    {% endfor %}
+{% endblock %}
