@@ -3,6 +3,7 @@
 
 {% block content %}
     <h1>Welcome to SWDB!</h1>
+    <h4>The Best Streetwear Database!</h4>
     <a href='/clothing/new'>Add a New Piece!</a>
     {% for item in clothing_db %}
         <h2><a href='/clothing/{{ item._id }}'>{{ item.name }}</a></h2>

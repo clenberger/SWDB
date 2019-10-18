@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, request
 from bson.objectid import ObjectId
 from pymongo import MongoClient
+import os
 
 client = MongoClient()
 db = client.StreetwearDB
@@ -8,11 +9,11 @@ clothing = db.clothing
 
 app = Flask(__name__)
 
-clothing.insert_many([
-    {'name': 'Flowers T-Shirt', 'brand': 'Supreme'},
-    {'name': 'ASSC Logo Hoodie', 'brand': 'ASSC'},
-    {'name': 'BOGO Hoodie', 'brand': 'Supreme'}
-])
+# clothing.insert_many([
+#     {'name': 'Flowers T-Shirt', 'brand': 'Supreme', 'image': './static/images/BoxLogo.png'},
+#     {'name': 'ASSC Logo Hoodie', 'brand': 'ASSC', 'image': 'Levis.png'},
+#     {'name': 'BOGO Hoodie', 'brand': 'Supreme', 'image': './static/images/BOGOhoodie.png'}
+# ])
 
 @app.route('/')
 def clothing_index():

@@ -3,7 +3,9 @@
 
 {% block content %}
 <a href='/'>Back to Feed!</a>
-
+<div>
+    <img src='{{item.image}}' width="500" height="500">
+</div>
 <h1>{{ item.name }}</h1>
 <h2>{{ item.brand }}</h2>
 {% endblock %}
