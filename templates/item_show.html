@@ -3,22 +3,31 @@
 
 {% block content %}
 <a href='/'>Back to Feed!</a>
-    <div class="card mb-3" style="max-width: 540px;">
+<div>
+    <img src='{{item.image}}' height="500" width="500">
+</div>
+
+    <div class="card mb-3" style="max-width: 500px;">
         <div class="row no-gutters">
-            <div class="col-md-4">
-                <img src='{{item.image}}' class="card-img">
-            </div>
             <div class="col-md-8">
-                <div class="card-body">
-                    <h1 class="card-title">{{ item.name }}</h1>
-                    <h2 class="card-text">{{ item.brand }}</h2>
-                    <p><a href='/clothing/{{ item._id }}/edit'>Edit This Post!</a></p>
-                    <p><form method='POST' action='/clothing/{{ item._id }}/delete'>
-                        <button type='submit'>Delete This Post!</button>
-                    </form></p>
+                <div class="card text-center" style="width: 50rem;">
+                    <div class="card-body">
+                        <h1 class="card-title">{{ item.name }}</h1>
+                        <h2 class="card-text">{{ item.brand }}</h2>
+                        <p><a href='/clothing/{{ item._id }}/edit'>Edit This Post!</a></p>
+                        <p><form method='POST' action='/clothing/{{ item._id }}/delete'>
+                            <button type='submit'>Delete This Post!</button>
+                        </form></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Item</li>
+        </ol>
+    </nav>
 {% endblock %}
