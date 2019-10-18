@@ -49,7 +49,7 @@ def item_edit(item_id):
     return render_template('item_edit.html', item=item)
 
 @app.route('/clothing/<item_id>', methods=['POST'])
-def playlists_update(item_id):
+def item_update(item_id):
     """Submit an edited item posting."""
     updated_item = {
         'name': request.form.get('name'),
@@ -59,6 +59,12 @@ def playlists_update(item_id):
         {'_id': ObjectId(item_id)},
         {'$set': updated_item})
     return redirect(url_for('item_show', item_id=item_id))
+
+@app.route('/clothing/<item_id>/delete', methods=['POST'])
+def item_delete(item_id):
+    """Delete an item posting."""
+    clothing.delete_one({'_id': ObjectId(item_id)})
+    return redirect(url_for('clothing_index'))
 
 if __name__ == '__main__':
     app.run(debug=True)
