@@ -3,8 +3,9 @@ from bson.objectid import ObjectId
 from pymongo import MongoClient
 import os
 
-client = MongoClient()
-db = client.StreetwearDB
+host = os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/SWDB')
+client = MongoClient(host=f'{host}?retryWrites=false')
+db = client.get_default_database()
 clothing = db.clothing
 
 app = Flask(__name__)
@@ -70,4 +71,4 @@ def item_delete(item_id):
     return redirect(url_for('clothing_index'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=os.environ.get('PORT', 5000))
