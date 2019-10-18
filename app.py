@@ -15,6 +15,8 @@ app = Flask(__name__)
 #     {'name': 'BOGO Hoodie', 'brand': 'Supreme', 'image': './static/images/BOGOhoodie.png'}
 # ])
 # clothing.drop()
+
+
 @app.route('/')
 def clothing_index():
     """Show clothing feed."""
@@ -31,7 +33,8 @@ def clothing_submit():
     """Submit a new clothing piece."""
     item = {
         'name': request.form.get('name'),
-        'brand': request.form.get('brand')
+        'brand': request.form.get('brand'),
+        'image': request.form.get('image')
     }
     item_id = clothing.insert_one(item).inserted_id
     return redirect(url_for('item_show', item_id=item_id))
