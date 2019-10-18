@@ -1,0 +1,27 @@
+<!-- templates/item_edit.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<form method='POST' action='/clothing/{{item._id}}'>
+    <fieldset>
+        <legend>Edit Item Posting</legend>
+        <!-- Name -->
+        <p>
+            <label for='item-name'>Name</label><br>
+            <input id='item-name' type='text' name='name' value='{{ item.name }}'/>
+        </p>
+
+        <!-- Brand -->
+        <p>
+            <label for='brand'>Brand</label><br>
+            <input id='brand' type='text' name='brand' value='{{ item.brand }}' />
+        </p>
+
+    </fieldset>
+
+    <!-- BUTTON -->
+    <p>
+        <button type='submit'>Save Edit!</button>
+    </p>
+</form>
+{% endblock %}

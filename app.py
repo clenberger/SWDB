@@ -42,5 +42,23 @@ def item_show(item_id):
     item = clothing.find_one({'_id': ObjectId(item_id)})
     return render_template('item_show.html', item=item)
 
+@app.route('/clothing/<item_id>/edit')
+def item_edit(item_id):
+    """Show the edit form for an item."""
+    item = clothing.find_one({'_id': ObjectId(item_id)})
+    return render_template('item_edit.html', item=item)
+
+@app.route('/clothing/<item_id>', methods=['POST'])
+def playlists_update(item_id):
+    """Submit an edited item posting."""
+    updated_item = {
+        'name': request.form.get('name'),
+        'brand': request.form.get('brand'),
+    }
+    clothing.update_one(
+        {'_id': ObjectId(item_id)},
+        {'$set': updated_item})
+    return redirect(url_for('item_show', item_id=item_id))
+
 if __name__ == '__main__':
     app.run(debug=True)
