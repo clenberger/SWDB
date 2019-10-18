@@ -9,11 +9,11 @@ clothing = db.clothing
 
 app = Flask(__name__)
 
-clothing.insert_many([
-    {'name': 'Flowers T-Shirt', 'brand': 'Supreme', 'image': './static/images/BoxLogo.png'},
-    {'name': 'ASSC Logo Hoodie', 'brand': 'ASSC', 'image': 'Levis.png'},
-    {'name': 'BOGO Hoodie', 'brand': 'Supreme', 'image': './static/images/BOGOhoodie.png'}
-])
+# clothing.insert_many([
+#     {'name': 'Flowers T-Shirt', 'brand': 'Supreme', 'image': './static/images/BoxLogo.png'},
+#     {'name': 'ASSC Logo Hoodie', 'brand': 'ASSC', 'image': './static/images/Levis.png'},
+#     {'name': 'BOGO Hoodie', 'brand': 'Supreme', 'image': './static/images/BOGOhoodie.png'}
+# ])
 # clothing.drop()
 @app.route('/')
 def clothing_index():

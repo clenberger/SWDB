@@ -5,16 +5,22 @@
     <div>
         <h1>Welcome to SWDB!</h1>
         <h4>The Best Streetwear Database!</h4>
-        <a href='/clothing/new'>Add a New Piece!</a>
     </div>
     <div class='row'>
         {% for item in clothing_db %}
             <div class='col-md-3'>
-                <div>
-                    <img src='{{item.image}}' width="200" height="200">
+                <div class="card text-center" style="width: 18rem;">
+                    <div class="card-body">
+                        <div>
+                            <img src='{{item.image}}' width="200" height="200">
+                        </div>
+                        <h2 class="card-title">{{ item.name }}</h2>
+                        <h5 class="card-text">{{ item.brand }}</h5>
+                        <div>
+                            <a href="/clothing/{{ item._id }}" class="btn btn-primary">View this item!</a>
+                        </div>
+                    </div>
                 </div>
-                <h2><a href='/clothing/{{ item._id }}'>{{ item.name }}</a></h2>
-                <small>{{ item.brand }}</small>
             </div>
         {% endfor %}
     </div>

@@ -3,13 +3,19 @@
 
 {% block content %}
 <a href='/'>Back to Feed!</a>
-<div>
-    <img src='{{item.image}}' width="500" height="500">
-</div>
-<h1>{{ item.name }}</h1>
-<h2>{{ item.brand }}</h2>
-<p><a href='/clothing/{{ item._id }}/edit'>Edit This Post!</a></p>
-<p><form method='POST' action='/clothing/{{ item._id }}/delete'>
-    <button type='submit'>Delete This Post!</button>
-</form></p>
+
+    <div class='col-lg'>
+        <div class="card text-center" style="width: 18rem;">
+            <div class="card-body">
+                <img src='{{item.image}}' width="300" height="300">
+                <h1 class="card-title">{{ item.name }}</h1>
+                <h2 class="card-text">{{ item.brand }}</h2>
+                <p><a href='/clothing/{{ item._id }}/edit'>Edit This Post!</a></p>
+                <p><form method='POST' action='/clothing/{{ item._id }}/delete'>
+                    <button type='submit'>Delete This Post!</button>
+                </form></p>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
