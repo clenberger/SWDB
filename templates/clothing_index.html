@@ -8,7 +8,7 @@
     </div>
 
 
-    {% comment %} <div class="d-flex flex-row bd-highlight mb-3">
+    <div class="d-flex flex-row bd-highlight mb-3">
         {% for item in clothing_db %}
         <div class="p-2 bd-highlight">
             <div class="col-md-3">
@@ -31,8 +31,8 @@
             </div>
         </div>
         {% endfor %}
-    </div> {% endcomment %}
-    {% for item in clothing_db %}
+    </div>
+    {% comment %} {% for item in clothing_db %}
         <div class="card" style="width: 18rem;">
             <img src="{{item.image}}" class="card-img-top" width="200" height="200">
             <div class="card-body">
@@ -41,5 +41,5 @@
                 <a href="/clothing/{{ item._id }}" class="card-link">View This Item!</a>
             </div>
         </div>
-    {% endfor %}
+    {% endfor %} {% endcomment %}
 {% endblock %}
