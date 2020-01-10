@@ -46,4 +46,10 @@
         flex-wrap: wrap;
         }
 
-        
+    h1{
+        color: white;
+    }
+
+    .jumbotron{
+        background: none;
+    }
