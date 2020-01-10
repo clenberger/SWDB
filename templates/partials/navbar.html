@@ -1,28 +1,29 @@
 <!-- templates/partials/navbar.html -->
 
-<nav class='navbar navbar-default'>
-        <div class='container-fluid'>
-            <div class='navbar-header'>
-                <a class='navbar-brand' href='/'>
-                    |SWDB|
-                </a>
-            </div>
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Categories
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">|TOPS|</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">|BOTTOMS|</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">|OUTERWEAR|</a>
-                    </div>
-                </li>
-            </ul>
-            <div class='pull-right'>
-                <a href='/clothing/new' class='btn btn-default navbar-btn'>Upload an Item!</a>
-            </div>
-        </div>
-    </nav>
+
+
+<header role="banner">
+  <img id="logo-main" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/32877/logo-thing.png" width="200" alt="Logo Thing main logo">
+<nav id="navbar-primary" class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-primary-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-primary-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</header><!-- header role="banner" -->
