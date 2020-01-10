@@ -29,7 +29,7 @@
 .hero-background-img:after {
     content: "";
     position: absolute;
-    background-image: url(swdb-jumbo.jpg);
+    background-image: url(static/images/swdb-jumbo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
