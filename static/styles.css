@@ -53,3 +53,7 @@
     .jumbotron{
         background: none;
     }
+
+    body{
+        background-color: gray;
+    }
