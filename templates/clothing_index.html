@@ -10,9 +10,7 @@
 
     <div class="d-flex flex-row bd-highlight mb-3">
         {% for item in clothing_db %}
-        <div class="p-2 bd-highlight">
-            <div class="col-md-3">
-                <div class="mh-100" style="height: 500px;">
+                <div class="card-deck">
                     <div class="card text-center" style="width: 18rem;">
                         <div class="card border-success mb-3" style="max-width: 18rem;">
                             <div class="card-body text-primary">
@@ -28,8 +26,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
         {% endfor %}
     </div>
 {% endblock %}
