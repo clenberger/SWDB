@@ -45,3 +45,8 @@
         display: flex;
         flex-wrap: wrap;
         }
+
+    .jumbotron {
+        background-image: url("static/images/swdb-jumbo.jpg");
+        background-size: cover;
+        }
