@@ -15,7 +15,8 @@
     {% for item in clothing_db %}
     <div class="col-md-3">
         <div class="mh-100" style="height: 500px;">
-            <div class="card card-accent-primary mb-3" style="width: 18rem;">
+            <div class="card" style="width: 18rem;">
+            <span class="border border-secondary"></span>
                 <img src="{{item.image}}" class="card-img-top" width="200" height="200">
                 <div class="card-body">
                     <h5 class="card-text">{{ item.name }}</h5>
