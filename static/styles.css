@@ -19,14 +19,14 @@
 	margin-left:auto;
 }
 
-.hero-background-img {
+.jumbotron {
     position: relative;
     background: rgba(0, 0, 0, 0.3); 
     padding-top:200px;  
     padding-bottom:200px;
     }
 
-.hero-background-img:after {
+.jumbotron:after {
     content: "";
     position: absolute;
     background-image: url(swdb-jumbo.jpg);
