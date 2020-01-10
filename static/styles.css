@@ -40,3 +40,12 @@
     z-index: -1;
     opacity: 0.5;
     }
+
+
+    .card {
+        margin-top: 10px;
+        box-sizing: border-box;
+        border-radius: 2px;
+        background-clip: padding-box;
+        min-height:400px;
+        }
