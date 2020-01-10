@@ -2,7 +2,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="hero-background-img"
+    <div class="hero-background-img">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h1 class="display-4">Welcome to SWDB!</h1>
@@ -12,17 +12,16 @@
     </div>
 
 
-    <div class="container"> 
+
     {% for item in clothing_db %}
-        <div class="col-md-3">
-            <div class="mh-100" style="height: 500px;">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{item.image}}" class="card-img-top" width="200" height="200">
-                    <div class="card-body text-center">
-                        <h3 class="card-text">{{ item.name }}</h3>
-                        <h3 class="card-text">{{ item.brand }}</h3>
-                        <a href="/clothing/{{ item._id }}" class="card-link">View This Item!</a>
-                    </div>
+    <div class="col-md-3">
+        <div class="mh-100" style="height: 500px;">
+            <div class="card" style="width: 18rem;">
+                <img src="{{item.image}}" class="card-img-top" width="200" height="200">
+                <div class="card-body text-center">
+                    <h3 class="card-text">{{ item.name }}</h3>
+                    <h3 class="card-text">{{ item.brand }}</h3>
+                    <a href="/clothing/{{ item._id }}" class="card-link">View This Item!</a>
                 </div>
             </div>
         </div>
