@@ -54,10 +54,10 @@
         background: none;
     }
 
-    .navbar{
+    body{
         background-color: lightgray;
     }
 
-    body{
-        color: darkgray;
+    .navbar{
+        background-color: darkgray;
     }
