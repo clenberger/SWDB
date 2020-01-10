@@ -9,17 +9,18 @@
 
 
 
+
+
+
     {% for item in clothing_db %}
     <div class="col-md-3">
         <div class="mh-100" style="height: 500px;">
-            <div class="card" style="width: 18rem;">
-                <div class="border">
-                    <img src="{{item.image}}" class="card-img-top" width="200" height="200">
-                    <div class="card-body">
-                        <h5 class="card-text">{{ item.name }}</h5>
-                        <h5 class="card-text">{{ item.brand }}</h5>
-                        <a href="/clothing/{{ item._id }}" class="card-link">View This Item!</a>
-                    </div>
+            <div class="card card-accent-primary mb-3" style="width: 18rem;">
+                <img src="{{item.image}}" class="card-img-top" width="200" height="200">
+                <div class="card-body">
+                    <h5 class="card-text">{{ item.name }}</h5>
+                    <h5 class="card-text">{{ item.brand }}</h5>
+                    <a href="/clothing/{{ item._id }}" class="card-link">View This Item!</a>
                 </div>
             </div>
         </div>
