@@ -41,3 +41,7 @@
     opacity: 0.5;
     }
 
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        }
