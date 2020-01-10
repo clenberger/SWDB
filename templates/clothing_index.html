@@ -12,8 +12,9 @@
     </div>
 
 
-    {% for item in clothing_db %}
-        <div class="row">
+    
+    <div class="row">
+        {% for item in clothing_db %}
             <div class="col-md-3">
                 <div class="mh-100" style="height: 500px;">
                     <div class="card container text-center mt-1" style="width: 18rem;">
@@ -26,6 +27,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-    {% endfor %} 
+        {% endfor %}
+    </div>
+
 {% endblock %}
