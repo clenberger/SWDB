@@ -21,7 +21,7 @@
                         <img src="{{item.image}}" class="card-img-top" width="200" height="200">
                         <div class="card-body">
                             <h3 class="card-text">{{ item.name|safe|truncate(20) }}</h3>
-                            <h3 class="card-text">{{ item.brand }}</h3>
+                            <h3 class="card-text">{{ item.brand|safe|truncate(20) }}</h3>
                             <a href="/clothing/{{ item._id }}" class="card-link stretched-link">View This Item!</a>
                         </div>
                     </div>
